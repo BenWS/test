@@ -1,0 +1,16 @@
+# list all databases
+psql
+postgres=# \l
+
+# initialize connection to postgres database
+sudo -u postgres psql
+
+# connect to another database
+\connect message_boards
+
+# other commands here: https://www.postgresqltutorial.com/postgresql-cheat-sheet/
+
+# grant all privileges on database
+
+# grant database creation permissions
+ALTER USER username CREATEDB;

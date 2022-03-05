@@ -1,0 +1,9 @@
+{% extends 'boards/base.html' %}
+{% block content %}
+<h3>{{ board_name|title }} > Edit Post</h3>
+<form method="post" action="{% url 'boards:edit-post/submit' board_name_url_formatted topic.id post.id %}" novalidate=>
+	{% csrf_token %}
+	{% include 'boards/form.html' %}
+	<button class="btn btn-primary" type="submit">Save Edit</button>
+</form>
+{% endblock %}

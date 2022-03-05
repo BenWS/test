@@ -1,0 +1,24 @@
+# directory to gunicorn service
+# /etc folder is system-wide
+
+# editing gunicorn service
+nano /etc/systemd/system/gunicorn.service
+
+# starting and enabling gunicorn
+systemctl daemon-reload
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+sudo systemctl status gunicorn
+sudo systemctl restart gunicorn
+
+# directory for nginx server blocks
+sudo nano /etc/nginx/sites-available/message-boards
+
+# restart nginx
+sudo systemctl restart nginx
+
+# troubleshooting faulty website connections
+sudo tail -F /var/log/nginx/error.log
+
+# adjusting nginx .conf file
+sudo nano /etc/nginx/ngnix.conf

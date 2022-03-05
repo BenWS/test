@@ -1,0 +1,8 @@
+# remove all files *within* specified directory
+rm -r /message_boards/boards/migrations/*
+
+# create empty file
+touch file.txt
+
+# TODO: moving contents *within* a particular directory to a new directory?
+# TODO: delete everything *except* a file within a directory

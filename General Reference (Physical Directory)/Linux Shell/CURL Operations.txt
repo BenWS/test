@@ -1,0 +1,2 @@
+# downloading file to new file on local
+curl http://some.url --output some.file

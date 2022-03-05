@@ -1,0 +1,17 @@
+# all sudo options documented here: https://www.sudo.ws/man/1.8.13/sudo.man.html
+
+# list groups
+groups
+
+# list users
+users
+
+# add user to sudo group
+usermod -aG sudo boards
+
+# switch user
+sudo su - boards
+
+# sync content from current user to another user
+# provides permissions to target user as well as file contents
+rsync --archive --chown=boards:boards ~/.ssh /home/boards

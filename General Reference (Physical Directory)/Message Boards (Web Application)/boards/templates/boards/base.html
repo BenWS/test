@@ -1,0 +1,39 @@
+<html>
+    {% include 'boards/head.html'%}
+    <body>
+        {% include 'boards/header.html' %}
+        <div class="pl-3 mt-3 container" id="content">
+            {% block content %}{% endblock %}
+            {% block footer %}
+                {% include 'boards/footer.html' %}
+            {% endblock %}
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+            <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+            <script>
+                var simplemde = new SimpleMDE();
+            </script>
+            <style>
+                form label {
+                    margin-top: 20px
+                }
+
+                .CodeMirror {
+                    max-height:300px
+                }
+
+                table {
+                    border:none
+                }
+
+                td {
+                    border:none
+                }
+
+                th {
+                    border:none
+                }
+            </style>
+        </div>
+    <body>
+</html>
